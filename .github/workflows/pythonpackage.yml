@@ -95,9 +95,9 @@ jobs:
               python -m pip install --upgrade pip && \
               apt-get update && \
               apt install -y build-essential && \
+              pip install pytest flake8 hypothesis && \
               apt-get install -y python3-dev && \
               python setup.py build_ext --inplace && \
-              python -m pip install .[test] && \
-              python -m pip install pytest && \
+              pip install .[test] && \
               pytest && \
               deactivate'
