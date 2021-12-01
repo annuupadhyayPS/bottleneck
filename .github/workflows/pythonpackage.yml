@@ -95,9 +95,9 @@ jobs:
               python -m pip install --upgrade pip && \
               apt-get update && \
               apt install -y build-essential && \
-              apt-get install -y python3.8-dev && \
+              apt-get install -y python3-dev && \
               python setup.py build_ext --inplace && \
-              pip install .[test] && \
+              python -m pip install .[test] && \
               python -m pip install pytest && \
               pytest && \
               deactivate'
